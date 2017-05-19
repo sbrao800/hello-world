@@ -10,7 +10,229 @@
       {
         "title": "Diagram-1",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 50,
+                "y": 50
+              },
+              "angle": 0,
+              "id": "c7d3a036-ca41-4b47-94af-e476565fae32",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "User"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 428,
+                "y": 154
+              },
+              "angle": 0,
+              "id": "ea6a6dfc-2ad2-4755-b3e0-1e8fe46038b3",
+              "z": 2,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Spoofing",
+                  "title": "Other customer email address",
+                  "description": "hacker might be able to add other customer email address to register",
+                  "mitigation": "verification email is sent to the email address mentioned during registration. Which will trigger user to check emails"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "XSS",
+                  "type": "Elevation of privilege",
+                  "description": "Hacker might be able to use XSS",
+                  "mitigation": "dont insert unstrusted data"
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Registration"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 705,
+                "y": 59
+              },
+              "angle": 0,
+              "id": "e5faa729-0325-4235-aa78-877225273429",
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "store 3"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "c7d3a036-ca41-4b47-94af-e476565fae32"
+              },
+              "target": {
+                "id": "ea6a6dfc-2ad2-4755-b3e0-1e8fe46038b3"
+              },
+              "vertices": [
+                {
+                  "x": 346,
+                  "y": 52
+                },
+                {
+                  "x": 368,
+                  "y": 49
+                },
+                {
+                  "x": 403,
+                  "y": 86
+                }
+              ],
+              "id": "4a6c99fc-6c2b-47c3-af44-6e112288995b",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Enter email address",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "ea6a6dfc-2ad2-4755-b3e0-1e8fe46038b3"
+              },
+              "target": {
+                "id": "e5faa729-0325-4235-aa78-877225273429"
+              },
+              "vertices": [
+                {
+                  "x": 636,
+                  "y": 145
+                },
+                {
+                  "x": 689,
+                  "y": 132
+                }
+              ],
+              "id": "b18f70bd-c259-4e51-9f28-a691d39f3eea",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Store data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": false,
+              "isEncrypted": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 537,
+                "y": 1
+              },
+              "target": {
+                "x": 542,
+                "y": 409
+              },
+              "vertices": [
+                {
+                  "x": 626,
+                  "y": 255
+                },
+                {
+                  "x": 639,
+                  "y": 324
+                }
+              ],
+              "id": "8f61c84d-26fe-43f8-8d8b-f0efefe353a2",
+              "z": 7,
+              "attrs": {}
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 936
+        }
       },
       {
         "title": "Diagram",
