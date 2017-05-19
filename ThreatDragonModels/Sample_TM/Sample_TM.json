@@ -11,6 +11,11 @@
         "title": "Diagram-1",
         "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 0
+      },
+      {
+        "title": "Diagram",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 1
       }
     ]
   }
